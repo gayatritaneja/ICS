@@ -126,7 +126,6 @@ let plus_rational (p: rational) (q: rational) : rational option =
   (* Different signs -> Subtract the numerators *)
   let num1 = mult n1 d2 in
   let num2 = mult n2 d1 in
-  12
   let den = mult d1 d2 in
   if num1 = num2 then
   (* num1 - num2 = 0 when they are equal *)
@@ -260,7 +259,6 @@ let rec approx_sqrt_2 (r: rational) (e: rational) (a: rational) : rational =
   let sum = match plus_rational quotient a with
   | Some s -> s
   | None -> failwith "Error in adding quotient and a"
-  15
   in
   (* 2 = 2/1 *)
   let two = match make_rational Plus (int_to_nat 2) (int_to_nat 1) with
